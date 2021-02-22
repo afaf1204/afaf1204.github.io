@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Keras Project Exercise</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afdhal Afgani's Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_page.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/money.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-14 mx-auto">
+          <div class="post-heading">
+            <h1>Keras Project Exercise</h1>
+            <h2 class="subheading">Focus on using keras to create a prediction model on that can predict wether or nor a borrower will pay back their loan.</h2>
+            <span class="meta">Posted by
+              <a href="#">Afdhal Afgani</a>
+              on February 21, 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-10 mx-auto">
+        <p align="justify"><a href="https://www.lendingclub.com/">LendingClub</a> is a US peer-to-peer lending company, headquartered in San Francisco, California. It was the first peer-to-peer lender to register its offerings as securities with the Securities and Exchange Commission (SEC), and to offer loan trading on a secondary market. LendingClub is the world's largest peer-to-peer lending platform. In this project, I use <a href="https://www.kaggle.com/wordsforthewise/lending-club">LendingClub dataset</a> that obtained from kaggle and this project is one of the project that I have done from the Python for Data Science and Machine Learning Bootcamp by Jose Portilla on Udemy.</p>
+            
+        <h2 class="section-heading"><u>Data Overview</u></h2>
+          
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=1" title="Jovian Viewer" height="970" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+          
+        <h2 class="section-heading"><u>Project Intro/Objective</u></h2>
+          
+        <p align="justify">Given historical data on loans given out with information on whether or not the borrower defaulted (charge-off), can we build a model thatcan predict wether or nor a borrower will pay back their loan? This way in the future when we get a new potential customer we can assess whether or not they are likely to pay back the loan. Keep in mind classification metrics when evaluating the performance of your model!</p>
+
+        <p align='justify'>The "loan_status" column contains our label.</p>
+            
+        <h2 class="section-heading"><u>Project Library</u></h2>
+            
+          <ul>    
+                <li>Numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>scikit-learn (sklearn)</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>random</li>
+          </ul>
+          
+        <h2 class="section-heading"><u>Starter Code</u></h2>
+        
+        <p align="justify">This starter code function is to create feat_info() function that will help us to know the description of a column</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=3-7" title="Jovian Viewer" height="431" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+            
+        <h2 class="section-heading"><u>Data and Setup</u></h2>
+            
+        <p align="justify">In this section, I want to show some of the data information, it includes Data Frame Info and Data Frame Head. First, we import the basic modules and read the lending_club_loan_two.csv file.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=9-10" title="Jovian Viewer" height="262" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>    
+            </div>
+            
+        <p align="justify">After that, we can see the data frame info and head.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=11-12" title="Jovian Viewer" height="1370" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+       <h2 class="section-heading"><u>Exploratory Data Analysis</u></h2>
+            
+       <p align="justify">In this section, I want to know which variables are important, view summary statistics, and visualize the data.</p>
+        
+       <h4>loan_status Countplot</h4>
+            
+       <p align="justify">Because I will be attempting to predict loan_status, I try to create a plot that will show the loan_status. From the countplot below, we can see that the majority of the borrower can fully paid their loan.</p>
+            
+            <div>
+                 <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=15" title="Jovian Viewer" height="381" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+        
+       <h4 style="margin-top: 20px;">loan_status Histogram</h4>     
+            
+       <p align="justify">Then, I create a histogram to see the distribuion of the loan mount. From the histogram below, we can see that amount of the borrower loan is between $5000 - $20000.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=17" title="Jovian Viewer" height="396" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+       <h4 style="margin-top: 20px;">Variable HeatMap</h4>     
+            
+       <p align="justify">After knowing the loan status count and histogram, I try to understand the data using correlation. First, I have to know the correlation of the variable within the data frame.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=19" title="Jovian Viewer" height="481" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">Then, I create a HeatMap using that correlated data frame.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=21" title="Jovian Viewer" height="645" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+       <p align="justify">From the HeatMap above, we can see that the most correlated data is loan_amnt and installment. We can check the description of loan_amnt and installment using the starter code.</p>  
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=23-24" title="Jovian Viewer" height="256" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+       <p align="justify">I try to create a scatter plot to understand the relationship between loan_amnt and installment. From the scatter plot below, we can see that loan_amnt and installment correlated with each other.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=25" title="Jovian Viewer" height="380" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+          
+       <p align="justify">Then I try to create a boxplot to understand the relationship between loan_status and loan_amnt. From the boxplot below, we can see the loan_amnt does not have effect on loan_status.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=27" title="Jovian Viewer" height="381" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+       <p align="justify">I calculate the summary statistics for the loan amount, grouped by the loan_status. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=29" title="Jovian Viewer" height="230" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+            
+       <p align="justify">Then I try to explore the grade and subgrades columns that LendingClub attributes to the loans.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=31-32" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+       <p align="justify">Then I create countplot to understand the relationship between loan_status and grade. From the countplot below, we can see grade E, F, and G has problem to pay their loan. So we can explore more on the subgrade to confirm this.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=34" title="Jovian Viewer" height="380" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+       <p align="justify">From the countplot below, we can see that grade F and G has problem to pay their loan. Then I try to isolate Grade F and G and create a new countplot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=37" title="Jovian Viewer" height="397" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+       <p align="justify">Below is the countplot for grade F and G.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=39" title="Jovian Viewer" height="433" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+       <p align="justify">I create a new column called 'loan_repaid' which will contain a 1 if the loan status was "Fully Paid" and a 0 if it was "Charged Off".</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=41-44" title="Jovian Viewer" height="674" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+            
+       <p align="justify">Then I create a bar plot showing the correlation of the numeric features to the new loan_repaid column. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=46" title="Jovian Viewer" height="466" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+            
+           <h2 class="section-heading"><u>Data Preprocessing</u></h2> 
+           
+       <p align='justify'>In this section, I remove or fill any missing data, remove unnecessary or repetitive features, and convert categorical string features to dummy variables.</p>
+            
+           <h4>Missing Value</h4>
+            
+       <p align="justify">First, I want to know is there any missing value on LendingClub dataset, and if there is a missing value, I want to know the percentage of the missing value.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=51" title="Jovian Viewer" height="118" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=53" title="Jovian Viewer" height="706" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=55" title="Jovian Viewer" height="706" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+            
+       <p align="justify">From the data above, we can see that empt_title and empt_length is the most columns that with missing value. So, we have to check the desctiption of this columns name.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=57" title="Jovian Viewer" height="257" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+       <p align="justify">We get the definition of emp_title and emp_length. We can check how many unique employment title are there.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=59-60" title="Jovian Viewer" height="433" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">There are 173105 unique employment title. Realistically there are too many unique job titles to try to convert this to a dummy variable feature. We can drop the emp_title.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=62-63" title="Jovian Viewer" height="537" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">Then, I create a count plot of the emp_length feature column. First, I have to count how many category of emp_length are, then sort using ascending. After that, I can create a countplot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=65-67" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">Then I creat a countplot using loan_status as hue. From the counplot below, still doesn't really inform us if there is a strong relationship between employment length and being charged off, what we want is the percentage of charge offs per category. Essentially informing us what percent of people per employment category didn't pay back their loan. So, I create a barplot that will give me information about the relationship emp_length and loan_status.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=69" title="Jovian Viewer" height="374" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">First, I have to calculate the number of employment charged off and fully paid based on their emp_length. Then I can calculate the percentage and create a barplot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=71-78" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">From the barplot below, we can see that there is no strong relationship between emp_length and loan_status, we can drop the emp_length from our data frame.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=79" title="Jovian Viewer" height="423" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=81" title="Jovian Viewer" height="503" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">We can check our data frame again and see the other missing value. We can see that we have missing value on title, we can check this column and compare it with purpose column, is it a repetead information?</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=83" title="Jovian Viewer" height="664" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">We can see that purpose and title contains the same informatin. So, we can drop the title column.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=85-86" title="Jovian Viewer" height="622" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=88" title="Jovian Viewer" height="503" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align="justify">After dealing with emp_title, emp_length, and title, we can move to other column that has mising value. At mort_acc column, we  there are many missing data, so we have to deal with this column.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=90" title="Jovian Viewer" height="121" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=92" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">I've got the definition of mort_acc using starter code, then we count the value of the mort acc. I can fill this missing data with linear model or mean/median of mort_acc, or simply drop this column. But, first I have to see the correlation of mort_acc with other column.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=94" title="Jovian Viewer" height="443" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify">Looks like the total_acc feature correlates with the mort_acc , I will try using fillna() approach. I will group the dataframe by the total_acc and calculate the mean value for the mort_acc per total_acc entry. To get the result below:</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=96" title="Jovian Viewer" height="422" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align="justify"> I will fill in the missing mort_acc values based on their total_acc value. If the mort_acc is missing, then we will fill in that missing value with the mean value corresponding to its total_acc value from the Series we created above. This involves using an .apply() method with two columns.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=98" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=100-102" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+       <p align="justify">There are two more column that has missing value, but they account for less than 0.5% of the total data. I can drop this two columns.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=104-105" title="Jovian Viewer" height="697" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+            
+        <h4 style="margin-top: 20px;">Categorical Variables and Dummy Variables</h4> 
+            
+        <p align="justify">I have done working with missing data. Now I just need to deal with the string values due to the categorical columns. First, I have to know which one is the string data, then I go through all the string features to see what I should do with them.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=107" title="Jovian Viewer" height="181" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+           
+        <h4 style="margin-top: 20px;">term Feature</h4>
+            
+        <p align="justify">I have to convert this string to either a 36 or 60 integer numeric data type. I will use .apply() to convert this string to integer numeric.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=109-111" title="Jovian Viewer" height="529" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <h4 style="margin-top: 20px;">grade Feature</h4>
+            
+        <p align="justify">I already know that grade is part of subgrade, I can drop this column.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=113" title="Jovian Viewer" height="503" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <p align="justify">Then I convert the subgrade into dummy variables. Then concatenate these new columns to the original dataframe.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=115-118" title="Jovian Viewer" height="604" width="100%" style="margin 0 auto; max-width: 700px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+            
+        <h4 style="margin-top: 20px;">verification_status,  application_type, initial_list_status, purpose Feature</h4>
+            
+        <p align="justify">I convert these columns: ['verification_status',  'application_type', 'initial_list_status', 'purpose'] into dummy variables and concatenate them with the original dataframe. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=120-123" title="Jovian Viewer" height="713" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <h4 style="margin-top: 20px;">home_ownership Feature</h4>
+            
+        <p align="justify">First, I want to teview the value_counts for the home_ownership column. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=125" title="Jovian Viewer" height="244" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <p align="justify">I convert these to dummy variables, but replace NONE and ANY with OTHER, so that I end up with just 4 categories, MORTGAGE, RENT, OWN, OTHER. Then concatenate them with the original dataframe.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=127-129" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <h4 style="margin-top: 20px;">address Feature</h4>
+            
+        <p align="justify">I can use the zip code from the address column, I can feature engineer it and create a column called 'zip_code' that extracts the zip code from the address column. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=131" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=133" title="Jovian Viewer" height="128" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <h4 style="margin-top: 20px;">issue_d Feature</h4>
+            
+        <p align="justify">I do not know how to use this data, because I wouldn't know beforehand whether or not a loan would be issued when using my model, so in theory I wouldn't have an issue_date, I have to drop this feature. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=135" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <h4 style="margin-top: 20px;">issue_d Feature</h4>
+            
+        <p align="justify">This appears to be a historical time stamp feature. I will rxtract the year from this feature using a .apply function, then convert it to a numeric feature. I will set this new data to a feature column called 'earliest_cr_year'.Then I will drop the earliest_cr_line feature.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=137-138" title="Jovian Viewer" height="209" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+        <h2 class="section-heading"><u>Model Preparation</u></h2> 
+            
+        <h4>Train Test Split</h4>
+            
+        <p align="justify">First, I import train test split from sklearn. Then drop the loan_status since its duplicate of loan_repaid column, and set  X and y variables to the .values of the features and label.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=141" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=143" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=145" title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align="justify">After that, I perform train test split with test_size=0.2 and a random_state of 101.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=149" title="Jovian Viewer" height="105" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <h4 style="margin-top: 20px;">Normalizing the Data</h4>
+            
+         <p align="justify">I will use a MinMaxScaler to normalize the feature data X_train and X_test. Then I only fit on the X_train data because I don't want data leakage from the test.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=151-154" title="Jovian Viewer" height="250" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <h2 class="section-heading"><u>Creating the Model</u></h2>
+            
+         <h4>Load TensorFlow and Keras</h4>        
+            
+         <p align="justify">I will use tensorflow.keras.models to import Sequential and tensorflow.keras.layers to import Dense and Dropout.</p>
+            
+         <p align='justify'>For information, TensorFlow is an open-sourced end-to-end platform, a library for multiple machine learning tasks, while Keras is a high-level neural network library that runs on top of TensorFlow. Both provide high-level APIs used for easily building and training models, but Keras is more user-friendly because it’s built-in Python.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=156" title="Jovian Viewer" height="128" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align="justify">Before setting the model, I have to know the shape of X_train. Using the code above, I know that X_train have 78 output. I can set the a model that goes 78 --> 39 --> 19--> 1 output neuron. Because we have two hidden layers, we can called this model as <b>Deep Learning</b>. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=158" title="Jovian Viewer" height="118" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align="justify">I will use keras sequential model. Sequential model is appropriate for a plain stack of layers where each layer has exactly one input tensor and one output tensor.</p>
+            
+         <p align="justify">I will use keras dense layer. Dense layer is a neural network layer that is connected deeply, which means each neuron in the dense layer receives input from all neurons of its previous layer.</p>
+            
+         <p align="justify">For activation function on Input layer and Hidden layers, I will use rectified linear activation function (relu). relu is a piecewise linear function that will output the input directly if it is positive, otherwise, it will output zero.</p>
+            
+         <p align="justify">For activation function on Output layer and Hidden layers, I will use sigmoid. sigmoid is exists between 0 to 1, we can use this activation function to give me an output of 0 or 1.</p>
+            
+         <p align="justify">I will set dropout layer to 0.2 in case of overfitting.</p>
+            
+         <p align="justify">Because we want an output 0 or 1, I will use binary_crossentropy as loss.</p>
+            
+         <p align="justify">I will use adam optimizer because adam optimizer is the most effective optimizer that we have right now.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=159" title="Jovian Viewer" height="348" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align="justify">In model.fit, I will fit the model to the training data for at least 25 epochs and add in the validation data for later plotting. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=161" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align="justify">After done with model.fit, I can save my model.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=163-164" title="Jovian Viewer" height="142" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+            <h2 class="section-heading"><u>Evaluating the Model</u></h2>
+            
+            <h4>Valuation Loss versus Training Loss</h4>        
+            
+         <p align="justify">To see how well my model perform, I can plot the valuation loss and training loss and see if there is much difference between this two value. If not, my model is good enough to use.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=166-167" title="Jovian Viewer" height="420" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+         <p align="justify">From the plot above, we can see that my training loss is not much different with valuation loss. I can say that my model is good enough but still has room for improvement.</p>
+            
+            <h4>Classification Report and Confusion Matrix</h4>
+            
+         <p align="justify">To create a classification report and confusion matrix, I have to import them from sklearn. Then I create a predictions variable using X_test then print it to see the result.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/keras-project-exercise/v/1&cellId=169-172" title="Jovian Viewer" height="757" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align="justify">From the classification report, I got good result when predicting the fully paid person but got some problems with predicting the charged-off person, where I can see the recall and f1-socre value is not good enough. I have to explore more to the charged-off person.</p>
+            
+         <p align="justify">From the confussion matrix, I got more False Positive than True Positive, but I got more True Negative than False Negative. From this confussion matrix, I can get information that my model is good enough to predict the charged-off person rather than fully paid person.</p>
+            
+         <p align="justify">From the classification report and confussion matrix, I can conclude that I have to explore more on the charged-off person and try to manipulate the imbalance data to get more convincing results.</p>
+            
+            <h2 class="section-heading" style="margin-top: 40px;"><u>Additional Resources</u></h2>
+            <ul>
+                <li>
+                    Header Backgrounds by Jason Leung at <a href="https://unsplash.com/photos/SAYzxuS1O3M">unsplash.com</a> 
+                </li>
+                <li>
+                    <a href="https://www.kaggle.com/wordsforthewise/lending-club">Kaggle Original Challenge Source</a>
+                </li>
+                <li>
+                    For further explanation regarding python code, please kindly check this <a href="https://github.com/afaf1204/Data-Projects/tree/main/Kaggle%20Data/LendingClub%20Keras%20Project">link</a>.
+                </li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/Afdhal_Gani10">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/afdhal-afgani/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/afaf1204">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Afdhal Afgani 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

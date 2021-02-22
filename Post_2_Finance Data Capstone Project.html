@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>911 Calls Capstone Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afdhal Afgani's Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_page.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/stock market.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-14 mx-auto">
+          <div class="post-heading">
+            <h1>Finance Data Capstone Project</h1>
+            <h2 class="subheading">Focus on exploratory data analysis of stock prices, meant to practice my visualization and pandas skills, it is not meant to be a robust financial analysis or be taken as financial advice.</h2>
+            <span class="meta">Posted by
+              <a href="#">Afdhal Afgani</a>
+              on February 1, 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-10 mx-auto">
+            <p align="justify">Finance Data Capstone Project is my own exercise project from Udemy Python for Data Science and Machine Learning Bootcamp by Jose Portilla. In this project, In this data project I will focus on exploratory data analysis of stock prices.</p> 
+                
+            <p align="justify">For this capstone project I will be analyzing stock prices data from Google Reader, unfortunately I can't access Google Reader from my computer, so I will use this <a href="https://github.com/afaf1204/Data-Projects/blob/main/Finance%20Project/all_banks">data</a> instead. This data contains stock information from following bank:</p>
+                
+            <ul>
+                <li>Bank of America</li>
+                <li>Citigroup</li>
+                <li>Goldman Sachs</li>
+                <li>JPMorgan Chase</li>
+                <li>Morgan Stanley</li>
+                <li>Wells Fargo</li>
+            </ul>
+                
+            <p>For each bank data contains the following fields:</p>
+            
+            <ul>
+                <li>Open, double precision float</li>
+                <li>High, double precision float</li>
+                <li>Low, double precision float</li>
+                <li>Close, double precision float</li>
+                <li>Volume, integer</li>                
+            </ul>
+          
+          <h2 class="section-heading"><u>Project Intro/Objective</u></h2>
+          
+          <p align="justify">The purpose of this project is meant to practice my visualization and pandas skills, it is not meant to be a robust financial analysis or be taken as financial advice.</p>
+            
+          <h2 class="section-heading"><u>Project Library</u></h2>
+            
+          <ul>    
+                <li>Numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>datetime</li>
+                <li>matplotlib.plyplot</li>
+                <li>Plotly</li>
+                <li>Cufflinks</li>
+          </ul>
+        
+          <h2 class="section-heading"><u>Data and Setup</u></h2>
+            
+          <p align="justify">In this section, I want to show some of the data information, I will use .head() to see all dataset and Bank of America data (BAC).</p>
+           
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=4-5" title="Jovian Viewer" height="547" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>  
+            </div> 
+          
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=14-15" title="Jovian Viewer" height="362" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+                      
+          <h2 class="section-heading"><u>Exploratory Data Analysis</u></h2>
+            
+          <p align="justify">From all banks data, I want to see the max Close price for each bank's stock throughout the time period.</p>
+          
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=19" title="Jovian Viewer" height="265" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+           <p align="justify">Then I create a new empty DataFrame called returns. This dataframe will contain the returns for each bank's stock.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=21" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=23" title="Jovian Viewer" height="348" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">For further study, I can use pairplot to see how each bank performance related to each other:</p>
+           
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=25" title="Jovian Viewer" height="787" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+          <p align="justify">For better understanding, we look to all banks return data. We looking for minimum, maximum, and standard deviation from each bank.</p>
+            
+          <div class="row">
+            
+            <div class="col-sm-6" style="background-color:white;">
+            <figure>
+                <img class="img-fluid" src="img/Finance Data Capstone Project/5. Returns min.PNG" alt="">
+                <figcaption>
+                <font size="2"><b>Returns Minimum</b></font>
+                </figcaption>  
+            </figure> 
+            </div>
+            
+            <div class="col-sm-6" style="background-color:white;">
+            <figure>
+                <img class="img-fluid" src="img/Finance Data Capstone Project/6. Returns max.PNG" alt="">
+                <figcaption>
+                <font size="2"><b>Returns Maximum</b></font>
+                </figcaption>  
+            </figure>
+            </div>
+              
+          </div>
+            
+          <div class="row">
+            
+            <div class="col-sm-6" style="background-color:white;">
+            <figure>
+                <img class="img-fluid" src="img/Finance Data Capstone Project/7. Returns std.PNG" alt="">
+                <figcaption>
+                <font size="2"><b>Returns Standard Deviation</b></font>
+                </figcaption>  
+            </figure>
+            </div>
+              
+            <div class="col-sm-6" style="background-color:white;">
+            <figure>
+                <img class="img-fluid" src="img/Finance Data Capstone Project/8. Returns 2015 std.PNG" alt="">
+                <figcaption>
+                <font size="2"><b>Returns 2015 Standard Deviation</b></font>
+                </figcaption>  
+            </figure> 
+            </div>
+          </div>
+        
+          <p align="justify">Then I try to look for Morgan Stanley 2015 and CitiGroup 2008 distribution plot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=36" title="Jovian Viewer" height="417" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=38" title="Jovian Viewer" height="417" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+          
+            
+          <h3>Data Visualization</h3>
+          <p align="justify">In this section, I try to visualize some financial analysis. First, I have to import the required modules, then try to visualize close price for each bank for the entire index of time (2008 - 2016). First, I try to create simple line plot of all banks close price using for loop and .xs then try to see if there is any difference between this two plot.</p>
+          
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=40" title="Jovian Viewer" height="249" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=42" title="Jovian Viewer" height="407" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=43" title="Jovian Viewer" height="393" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">I can see, using for loop and using .xs resulting the same plot, the difference is I can use shorter code while using .xs than using for loop.</p>
+            
+          <p align="justify">After that, I create line plot using iplot, the difference is I can create an interactive graph while using iplot, where I can get the data directly when I move our cursor to certain line.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=44" title="Jovian Viewer" height="630" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">Then, I try to create a moving averages plot using rolling with window = 30 and create the corrleation data frame using Close price as key value.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=46" title="Jovian Viewer" height="446" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify"> After created correlation data frame, I try to plot HeatMap and ClusterMap using simple plot to makes easier for me to look the correlation between our data.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=48" title="Jovian Viewer" height="402" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=50" title="Jovian Viewer" height="769" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify"> After created Heatmap using simple plot, I try to create Heatmap using iplot and see the difference.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=54" title="Jovian Viewer" height="630" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">The difference between simple plot and iplot is when using iplot, I can create an interactive plot where I can see the value for certain position using our pointer, and simple plot just showing the plot and does not create an interactive plot.</p>
+            
+          <p align="justify">Furthermore, I try to create some advance financial analysis technic. I try to plot using iplot to get an interactive plot.</p>
+            
+          <p align="justify">First, I create Bank of America candlestick for the year 2015. Using iplot and kind as 'candle', I get candlestick plot like this:</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=55" title="Jovian Viewer" height="650" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">Second, I create Morgan Stanley simple moving averages for the year 2015. I use .ta_plot(study='sma') and periods [13, 21, 55]:</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=57" title="Jovian Viewer" height="647" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">Third, I create Bank of America Bollinger Band Plot for the year 2015. I use .ta_plot(study='boll'):</p> 
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/finance-project/v/1&cellId=59" title="Jovian Viewer" height="630" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <h2 class="section-heading"><u>Conclusion</u></h2>
+          
+          <ul>
+                <li>Google Reader performance varies within countries</li>
+                <li>Almost all banks sinks stocks on <b>Inauguration Day (2009-01-20)</b></li>
+                <li>Citigroup got minimum returns on <b>reverse stock split day (2011-05-06)</b></li>
+                <li>Simple line plot using .xs has shorter code than using for loop but got the same result</li>
+                <li>iplot is more interactive than simple plot</li>
+                <li>We can use <b>.ta_plot()</b> for some financial analysis</li>
+          </ul>
+           
+          
+          <h2 class="section-heading"><u>Additional Resources</u></h2>
+            <ul>
+                <li>
+                    Header Backgrounds by Wallpaper Flare at <a href="https://www.wallpaperflare.com/grayscale-photo-of-line-graph-stock-trading-monitor-desk-wallpaper-uksjt">wallapaperflare.com</a> 
+                </li>                
+                <li>
+                    For further explanation regarding python code, please kindly check this <a href="https://github.com/afaf1204/Data-Projects/tree/main/Finance%20Project">link</a>.
+                </li>
+            </ul>
+            
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/Afdhal_Gani10">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/afdhal-afgani/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/afaf1204">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Afdhal Afgani 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

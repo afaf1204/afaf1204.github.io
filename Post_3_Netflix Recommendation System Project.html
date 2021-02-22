@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Netflix Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+    
+  
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afdhal Afgani's Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_page.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/netflix.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-14 mx-auto">
+          <div class="post-heading">
+            <h1>Netflix Project</h1>
+            <h2 class="subheading">Try to analyse, create data visualization, exploratory data analysis, and create a model recommendation from Netflix dataset and additional data from IMDB dataset and Good Books dataset.</h2>
+            <span class="meta">Posted by
+              <a href="#">Afdhal Afgani</a>
+              on February 21, 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-10 mx-auto">
+          <p align="justify">Netflix Project is my own exercise project where I got the data from kaggle. There are 3 datasets that I will use in this project, that data are <a href="https://www.kaggle.com/shivamb/netflix-shows">Netflix Dataset</a>, <a href="https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset">IMDB Dataset</a>, and <a href="https://www.kaggle.com/zygmunt/goodbooks-10k">Good Books Dataset</a>.
+          First, I want to analyse Netflix Dataset and use IMDB Dataset to add more information regarding the Netflix content (TV Shows and Movies), then I try to see if there are a content that comes from a book. 
+              
+          <h2 class="section-heading"><u>Project Intro/Objective</u></h2>
+          
+          <p align="justify">The purpose of this project is to analyse Netflix Dataset with help form addtition data, create data visualization, exploratory data analysis, and create a model recommendation for Netflix Content.</p>
+            
+          <h2 class="section-heading"><u>Project Library</u></h2>
+            
+          <ul>    
+                <li>Numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Plotly</li>
+                <li>Collections</li>
+                <li>WordCloud</li>
+                <li>sklearn (scikit-learn)</li>
+          </ul>
+        
+          <h2 class="section-heading"><u>Data Preparation</u></h2>
+            
+          <p align="justify">In this section, I want to know the information regarding the Netflix Dataset. First, I want to look at the head of Netflix Dataset.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=4" title="Jovian Viewer" height="697" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">Then I want to look at the Netflix Dataset information, where I can get information regarding how many data are there for each columns and the data type. After that, I search for null data, is there any null data for each columns.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=5" title="Jovian Viewer" height="553" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=7" title="Jovian Viewer" height="370" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <h2 class="section-heading"><u>Data Cleansing and Exploratory Data Analysis</u></h2>
+            
+          <p align="justify">In this section, I want to explore the Netfllix Dataset where I can visualize the data and if needed, I will do some data cleansing. </p>
+          
+          <h3>Comparison of the Number between TV Shows and Movies on Netflix</h3> 
+            
+          <p align="justify">In this section, I want to see the comparison of the number between TV Shows and Movies on Netflix. First, I want to divide between TV Shows and Movies from Netflix Content, then I will try to analyse for each TV Shows and Movies.</p> 
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=10" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=11" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+          
+          <p align="justify">From the code above, I can divide the content between TV Shows and Movies. Then, I try to use countplot to see the difference in the sum between TV Shows and Movies on Netflix.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=12" title="Jovian Viewer" height="380" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">As you can see from the countplot above, there are more Movies than TV Shows on Netflix.</p>
+            
+        
+          <h3>Date of Release</h3>
+          <p align='justify'>In this section, I want to know the date of release for TV Shows and Movies, and try to analyse for is there a time where more content released or not.</p>
+            
+          <h5>TV Shows</h5>
+            
+          <p align='justify'>First, I have to create a data frame that contain information about the date of release like year, month, and the number of TV Shows which released that time. I drop the na columns then extract the year and month information from netflix_shows.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=15" title="Jovian Viewer" height="145" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+          
+          <p align='justify'>Then, with groupby I create the data frame using the extracted year, month, and list of month for the rows label. Then I use value_counts() to find the number of TV Shows released for a certain date and I fill the empty columns with 0. The result is date_shows_df where we can see how many TV Shows were released for a certain date.</p>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=16" title="Jovian Viewer" height="105" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=17" title="Jovian Viewer" height="105" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=18" title="Jovian Viewer" height="500" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align='justify'>To help me analyse the date of release, I create a heatmap so I can see the date of release for certain date much easier.</p> 
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=19" title="Jovian Viewer" height="680" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+                        
+          <h5 style="margin-top: 10px;">Movies</h5>
+            
+          <p align='justify'>Same with the TV Shows above, I have to create data frame that contains date of release for the movies. I will use netflix movies then extract the year and month.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=21" title="Jovian Viewer" height="145" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+          
+          <p align='justify'>Then, I create the data frame using the same method as TV Shows above.</p>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=22" title="Jovian Viewer" height="105" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=23" title="Jovian Viewer" height="510" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align='justify'>Then I create a heatmap so I can see the date of release for certain date much easier.</p> 
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=24" title="Jovian Viewer" height="645" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align='justify'>If we compare these two heatmap, we can see that in the year 2020 that there are still many TV Shows update than Movies update, because maybe that Movies required much budget rather than TV Shows.</p>
+            
+          <p align='justify'>In Netflix TV Shows Content Update year 2020, we can see that there are comparetively much more content was released, it is because January is before the pandemic begin and December is after several months of ongoing pandemic and people much more adapt to this pandemic. This pattern not happened in Netflix Movies Content Update.</p>
+          
+          <h3>Rating Analysis</h3>
+          <p align='justify'>In this section, I want to know the TV Rating for each content then try to find the most TV rating for each content.</p>
+            
+          <div>
+          <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=27" title="Jovian Viewer" height="740" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>  
+          </div>
+            
+          <div>
+          <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=28" title="Jovian Viewer" height="740" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>  
+          </div>
+            
+          <p align='justify'>From these two countplot, the largest count of Movies and TV Shows are made with the 'TV-MA' rating. 'TV-MA' rating is a rating assigned by TV Parental Guidelines designed for mature audiences only.</p>
+            
+          <p align='justify'>Second largest count of Movies and TV Shows is the 'TV-14', a content that may be inappropriate for children younger than 14 years of age.</p>
+          
+          <p align='justify'>But for the third largest, we got different result between Movies and TV Shows. Where the third largest of Movies is 'R', a content where children under 17 years old require accompanying parent or adult guardian. And the third largest of TV Shows is 'TV-PG', a content that contain some material that parents or guardians may find inappropriate for younger children.</p>
+            
+          <h3>Preparing Data from Netflix and IMDB dataset</h3>
+          
+          <h5 style="margin-top: 10px;">Merge the Dataset then Perform Data Cleansing</h5>
+            
+          <p align='justify'>First, we read the csv file of IMDb ratings.csv then use only the weighted_average_vote column.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=31" title="Jovian Viewer" height="339" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align='justify'>Then, we read the csv file of IMDb moies.csv then use only title, year, and genre columns.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=32" title="Jovian Viewer" height="443" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+         <p align='justify'>We combine these two data frames to create a new data frame called ratings.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=33" title="Jovian Viewer" height="168" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            
+         <p align='justify'>Finally, we drop the duplicates data from the subset of Title, Release Year, and IMDB Rating. We did the drop duplicates to avoid the duplicate information of Movies or TV Shows.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=34" title="Jovian Viewer" height="155" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe> 
+            </div>   
+         
+         <p align='justify'>Using .info, I want to know how many entries are there and the data type.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=36" title="Jovian Viewer" height="361" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align='justify'>After created the ratings (imdb dataset) data frame, I will merge it with the netflix_df (netflix dataset) to create a data frame that contains Netfilx content and their IMDb information, we called it joint_netflix_imdb.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=38" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align='justify'>But, we got some dirty data on joint_netflix_imdb, there are some duplicate columns and the column with same name but contains different information, we need to clean this dirty data.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=39" title="Jovian Viewer" height="181" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+       <p align='justify'>To clean the data, first we need to drop the duplicate columns that contains same information, so we drop title and Release Year columns.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=40" title="Jovian Viewer" height="221" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>     
+            
+            
+       <p align='justify'>Then we change all the columns to lowercase and change rating to tv_rating.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=41" title="Jovian Viewer" height="278" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+       <p align='justify'>Store the result to netflix_imdb_df.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=42" title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>     
+            
+       <h3>Analysis of Content on Netflix</h3>
+          
+       <h5 style="margin-top: 10px;">Top Rated Content on Netflix</h5>        
+            
+       <p align='justify'>Using px.sunburst, we create a pie chart for top rated content and contry origin.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=45" title="Jovian Viewer" height="790" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>        
+            
+        <p align='justify'>We can see Breakout does not have country information because on our dataset (netflix_df) it does not have information about the country (NaN).</p>    
+            
+        <h5 style="margin-top: 10px;">Countries with Highest Rated Content</h5>        
+           
+        <p align='justify'>First, we have to create a new data frame that contains information about the countries and their number of content.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=48" title="Jovian Viewer" height="515" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+         <p align='justify'>Then using that data frame, we create a funnel plot. We can see that United States and India are the countries with most content on Netflix.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=49" title="Jovian Viewer" height="747" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+      
+        <h5 style="margin-top: 10px;">Year Wise Analysis</h5>    
+            
+        <p align='justify'>Using seaborn, we create a countplot. From that plot, we can see that 2018 is the year with most released contents.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=51" title="Jovian Viewer" height="770" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            
+        <h5 style="margin-top: 10px;">Top 10 Movies Creating Countries</h5>    
+            
+        <p align='justify'>In this section, I want to know which country that has created most movies on Netflix. First, we extract the country information from netflix_movies.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=54" title="Jovian Viewer" height="400" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>        
+            
+        <p align='justify'>After that, we must count the number of the country.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=55" title="Jovian Viewer" height="265" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+        <p align='justify'>After that, we plot that data using seaborn barplot. From that plot we can see that United States has created more movies than any other countries.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=56" title="Jovian Viewer" height="810" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            
+        <h5 style="margin-top: 10px;">Duration of Movies</h5>    
+            
+        <p align='justify'>In this section, I want to know the lenght for each movies and try to find the good amount of duration for a movies. We extract the duration from netflix_movies and try to clean the data so we get only the minutes of the movies, it makes easier to plot.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=58" title="Jovian Viewer" height="190" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>            
+        
+        <p align='justify'>We try to plot it using KDE plot so we can see the distribution of the duration for a movies. From KDE plot above, we can see that a good amount of movies duration on Netflix are between 75 - 120 mins.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=59" title="Jovian Viewer" height="660" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+        <h5 style="margin-top: 10px;">WordCloud for Movies Genres</h5>    
+        
+        <p align='justify'>I want to create a WordCloud for movies genres, WordCloud will makes easier to see all of the movies genre in one image. First, using collections module, we try to count the genre in netflix_movies.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=62" title="Jovian Viewer" height="268" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align='justify'>After that, we plot the WordCloud using wordcloud module. From that WordCloud, we can see more genres only using one image. The bigger the count, the bigger the word.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=63" title="Jovian Viewer" height="610" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+            
+        <h5 style="margin-top: 10px;">Lollipop Plot for Movies Genres</h5>    
+            
+        <p align='justify'>I create a lollipop plot to see the count of the movies genres. Lollipop plot is easier to use when we use data from collection module, so our data is from collection module, we can use lollipop plot. </p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=65" title="Jovian Viewer" height="1100" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+        <p align='justify'>From the Lollipop Plot above, we can see that the top three genres that have the highest amount of content on Netflix is International Movies, Dramas, and Comedies.</p>   
+            
+        <h5 style="margin-top: 10px;">Most TV Shows Creating Country</h5>     
+            
+        <p align='justify'>In this section, I want to know which country that has created most tv shows on Netflix. First, we extract the country information from netflix_shows.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=68" title="Jovian Viewer" height="400" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+         <p align='justify'>After that, we count the number of the country.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=69" title="Jovian Viewer" height="265" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+         <p align='justify'>After that, we plot that data using seaborn barplot. From that plot we can see that United States top tv shows creating country on Netflix.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=71" title="Jovian Viewer" height="755" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+            
+         <h5 style="margin-top: 10px;">TV Shows with Most Seasons</h5>   
+            
+         <p align='justify'>In this section, I want to know which TV Shows that has most seasons on Netflix. Because netflix_shows columns that conatins seasons information not in numeric, we have to convert this. First we create a dummy called features that contain title and duration. Then we put the netflix_shows data frame in this dummy. After that, we replace the string value to empty value.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=74" title="Jovian Viewer" height="170" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+        <p align='justify'>Finally, we convert that string datatype to integer.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=75" title="Jovian Viewer" height="100" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+         <p align='justify'>After got the seasons with integer datatype, we sort the value to get the top 20 TV Shows that has most seasons.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=77" title="Jovian Viewer" height="148" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+         
+        <p align='justify'>Finally, we create a barplot using seaborn. We've got Grey's Anatomy for TV Shows with the most seasons with 16 seasons, also there are 2 others TV Shows that at least has 15 seasons, that TV Shows are NCIS and Supernatural.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=79" title="Jovian Viewer" height="1300" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+        <h5 style="margin-top: 10px;">TV Shows Season Analysis</h5>    
+            
+        <p align='justify'>After we know the top 20 TV Shows with most seasons, I want to know the distribution off all season. So I create a new data frame.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=82" title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=83" title="Jovian Viewer" height="97" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align='justify'>After that, I create a pie chart. From that Pie Chart, we can see that 66.7% of the TV Shows on Netflix only has 1 season. And we can say that majority of the TV Shows on Netflix has 1 to 3 seasons.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=84" title="Jovian Viewer" height="747" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+            
+        <h5 style="margin-top: 10px;">WordCloud for TV Shows Genres</h5>    
+        
+        <p align='justify'>In this section, I want to create a WordCloud for tv shows genres. First, using collections module, we try to count the genre in netflix_movies.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=87" title="Jovian Viewer" height="230" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align='justify'>After that, we plot the WordCloud using wordcloud module. </p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=88" title="Jovian Viewer" height="630" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>     
+            
+        <h5 style="margin-top: 10px;">TV Shows in United States</h5>    
+        
+        <p align='justify'>In this section, I want to see the oldest and the latest TV Shows in United States. First, I need to create a oldest tv shows and latest tv shows variable.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=90" title="Jovian Viewer" height="145" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+        <p align='justify'>Using go.Figure, I create a table for the oldest and latest tv shows in United States. From that table, we can see that the oldest TV Shows in United States is from 1946, the title is Pioneers of African_American Cinema.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=91" title="Jovian Viewer" height="727" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=93" title="Jovian Viewer" height="727" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <h5 style="margin-top: 10px;">Content in Indonesia</h5>    
+        
+        <p align='justify'>In this section, I want to analyse Content in Indonesia. I analyse using director approach, where I try to analyse the content and the its director. </p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=96" title="Jovian Viewer" height="727" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>       
+            
+        <p align='justify'>From the figure above, we can see that content in Indonesia is divided by popular director and not so popular director. Riri Riza and Rocky Soraya is the most popular director which each has 5 films on their name. The majority of Indonesia director has 1 content on their name. Then we try to sort the content from the latest year, we see that content from Indonesia on Netflix are all the latest contents, with the oldest content from 2019.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=98" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=99" title="Jovian Viewer" height="707" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+       <h2 class="section-heading" style="margin-top: 20px;">Recommendation System</h2>
+          
+       <h5 style="margin-top: 10px;">Using TfidfVectorizer</h5>    
+            
+       <p align='justify'>In this section, I use TF-IDF for recomendation system. The TF-IDF(Term Frequency-Inverse Document Frequency (TF-IDF) ) score is the frequency of a word occurring in a document, down-weighted by the number of documents in which it occurs. This is done to reduce the importance of words that occur frequently in plot overviews and therefore, their significance in computing the final similarity score.</p>
+       
+            
+       <p align='justify'>First, I must import the TfidfVectorizer from scikit-learn (sklearn). Then, I setting the TfidfVectorizer, I set the stop_words as english because all of the data is in english language. Then I replace NAN with an emprty string, after that I fit and transform the netflix_df['description'], because we will use the description to find a film that has similar plot. Lastly, we check the shape of tfidf_matrix. We've got tfidf_matrix that contains 17095 words and 7787 movies title. </p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=102" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=103" title="Jovian Viewer" height="318" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+       <p align='justify'>After fot the tfidf_matrix, I must cosine_sim and set the get_recommendation function. To set cosine_sim, I import linear_kernel from sklearn then compute the cosine similarity matrix. Then I create indices varieable where it will be use as title index.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=105" title="Jovian Viewer" height="168" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=106" title="Jovian Viewer" height="110" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+        
+        <p align='justify'>For get_recommendation function, we use indices for index. Then get the pairwise similarity scores off all movies then sort it based on similarity scores. Because I want to the recommendation system show only 10 movies, I took only top 10 most similar movies, then get the index and return the movies name.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=107" title="Jovian Viewer" height="410" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+        <p align='justify'>After create the recommendation system using TfidfVectorizer, we try to use it. From these two examples below, we see that our recommendation is not good enough, so we need to upgrade our model.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=109" title="Jovian Viewer" height="328" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=110" title="Jovian Viewer" height="328" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+        <h5 style="margin-top: 10px;">Content Based Filtering on Multiple Metrics</h5> 
+        
+        <p align='justify'>I try to add another factor beside the description, I will try to use these factors:</p>
+            <ul>
+                <li>Title</li>
+                <li>Cast</li>
+                <li>Director</li>
+                <li>Listed in</li>
+                <li>Plot</li>
+            </ul>
+            
+        <h6>Cleaning Data</h6>
+            
+        <p align='justify'>Before use the data frame to a new model, I have to clean the netflix_df. again because we add new factors. First, I want to fillna with an empty data.</p>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=114" title="Jovian Viewer" height="697" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+            
+      <p align='justify'>Then, I make a new function called clean_data that will convert all the words to lowercase.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=116" title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+            
+      <p align='justify'>After all the data in lowercase, I try to identifying all the factors and store it in fillna variable.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=118" title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>        
+            
+            
+      <p align='justify'>Then, I applying fillna to the clean_data function.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=119" title="Jovian Viewer" height="367" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+       <p align='justify'>After got all the lowercase words for fillna, I create the bag of words. To create a bag of words, I create a new function called create_soup then applying fillna to this create_soup function.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=121" title="Jovian Viewer" height="125" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=122" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+            
+            
+       <h5 style="margin-top: 10px;">Using CountVectorizer</h5>    
+            
+       <p align='justify'>In this section, I use CountVectorizer for recomendation system. CountVectorizer is used to transform a given text into a vector on the basis of the frequency (count) of each word that occurs in the entire text. This is helpful when we have multiple such texts, and we wish to convert each word in each text into vectors (for using in further text analysis).</p>
+           
+       <p align='justify'>The reason why I use CountVectorizer eventhough TfidfVectorizer works better that CountVectorizer is because we add more factors and I want to get the fast result because CountVectorizer only <b>count the number of times a word appears in the document</b> and TfidfVectorizer <b>consider overall document weightage of a word</b>.</p>
+       
+            
+       <p align='justify'>First, I must import CountVecorizer and cosine_similarity from sklearn. Then use english as stop_words for CountVectorizer and fit_transform using fillna (bag of words), finally I compute the cosine similarity matrix.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=124" title="Jovian Viewer" height="208" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div> 
+       
+       <p align='justify'>For the index, I reset the index then create a new index for the movies.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=125" title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+       
+       <p align='justify'>For get_recommendation function, we use indices for index. Then get the pairwise similarity scores off all movies then sort it based on similarity scores. Because I want to the recommendation system show only 10 movies, I took only top 10 most similar movies, then get the index and return the movies name. This function work same as before.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=126" title="Jovian Viewer" height="428" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+                       
+        <p align='justify'>After create the recommendation system using CountVectorizer, we try to use it. The difference with the TfidfVectorizer is on this get_recommendation, we also input the cosine_sim2, where cosine_sim2 is the new cosine similarity matrix.</p>
+            
+             <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=109" title="Jovian Viewer" height="328" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>    
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=110" title="Jovian Viewer" height="328" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            
+        <h2 class="section-heading" style="margin-top: 10px;">Netflix Content from Books?</h2>
+          
+        <p align='justify'>In this section, I want to know is there a content on Netflix that originates from books. First I load the books.csv data and called it books_df.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=131" title="Jovian Viewer" height="461" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+        
+        <p align='justify'>Then, I merge the books_df with netflix_df and called the new data frame as netflix_books. Before I merge the data frame, I convert the title on netflix_df and books_df to lowercase to make sure there is no error in merge the data because of the words case.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=132" title="Jovian Viewer" height="195" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>    
+            </div>    
+            
+        <p align='justify'>Finally, I create a Pie Chart from netflix_books using go.Pie. From the Pie chart below, we can see that the majority content on Netflix is not from a book, where Shows From Books is 3.58% and Shows Not From Books is 96.4%.</p>
+            
+            <div>
+            <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/netflix-project/v/1&cellId=133" title="Jovian Viewer" height="787" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <h2 class="section-heading" style="margin-top: 40px;"><u>Additional Resources</u></h2>
+            <ul>
+                <li>
+                    Header Backgrounds by Mollie Sivaram at <a href="https://unsplash.com/photos/yubCnXAA3H8">unsplash.com</a> 
+                </li>
+                <li>
+                    <a href="https://www.kaggle.com/shivamb/netflix-shows">Kaggle Original Challenge Source</a>
+                </li>
+                <li>
+                    For further explanation regarding python code, please kindly check this <a href="https://github.com/afaf1204/Data-Projects/tree/main/Kaggle%20Data/Netflix%20Visualization%2C%20EDA%2C%20Recomendation">link</a>.
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/Afdhal_Gani10">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/afdhal-afgani/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/afaf1204">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Afdhal Afgani 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

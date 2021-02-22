@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Linear Regression Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afdhal Afgani's Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_page.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/ecommerce.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-14 mx-auto">
+          <div class="post-heading">
+            <h1>Linear Regression Project</h1>
+            <h2 class="subheading">Focus on using linear regression to analyze ecommerce customer data. In this project I will use dummy dataset and try to decide whether to focus their efforts on their mobile app experience or their website. </h2>
+            <span class="meta">Posted by
+              <a href="#">Afdhal Afgani</a>
+              on February 22, 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-10 mx-auto">
+          <p align="justify">Linear Regression Project is my own exercise project from Udemy Python for Data Science and Machine Learning Bootcamp by Jose Portilla. In this project, I will analyze the <a href="https://github.com/afaf1204/Data-Projects/blob/main/Linear%20Regression%20Project/Ecommerce%20Customers">ecommerce dummy dataset</a> and decide whether to focus their efforts on their mobile app experience or their website. I use Python Anaconda using Jupyter Notebook. 
+          <h2 class="section-heading"><u>Project Intro/Objective</u></h2>
+          
+          <p align="justify">The purpose of this project is use linear regression to decide whether to focus their efforts on their mobile app experience or their website.</p>
+            
+          <h2 class="section-heading"><u>Project Library</u></h2>
+            
+          <ul>    
+                <li>Numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>scikit-learn (skelearn)</li>
+          </ul>
+        
+          <h2 class="section-heading"><u>Data and Setup</u></h2>
+            
+          <p align="justify">In this section, I want to show some of the data information, it includes data frame head, information, and description.</p>
+          
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=4" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=6-8" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align='justify'>customers data contains Customer info, suchas Email, Address, and their color Avatar. Then it also has numerical value columns: </p>
+            
+            <ul>
+                <li>Avg. Session Length: Average session of in-store style advice sessions.</li>
+                <li>Time on App: Average time spent on App in minutes</li>
+                <li>Time on Website: Average time spent on Website in minutes</li>
+                <li>Length of Membership: How many years the customer has been a member.</li>
+            </ul>
+            
+          <h2 class="section-heading"><u>Exploratory Data Analysis</u></h2>
+            
+          <p align="justify">In this section, I want to exlpore all of the numerical data. Because in my opinion, this numerical value will contribute more to understand the customer behaviour rather than alphanumeric data like email, address, and avatar.</p>
+            
+          <h3>Jointplot</h3>
+          <p>In this section, I will try to analyze the numerical data using jointplot. I use jointplot because I can analyze two variables using this plot. First, I want to analyze the relationship between Time on Website and Yearly Amount Spent.</p>    
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=11" title="Jovian Viewer" height="542" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+          
+          <p align="justify">Second, I want to analyze the relationship between Time on App and Yearly Amount Spent.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=13" title="Jovian Viewer" height="542" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">Third, I want to analyze the relationship between Time on App/Website and Length of Membership.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=15" title="Jovian Viewer" height="559" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers-41d60/v/1&cellId=16" title="Jovian Viewer" height="559" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p align="justify">From all of the jointplots above, it shows the normal distribution. Where person who spent an average time on website or app will spent more than person who spent to little time or to musch time. And person who has average length of membership will spent more time on app than person who is a new membership or old membership.</p>  
+            
+          <p align="justify">Then I decide to look the relationship accross entire dataset. I will use pairplot to get this relationship information.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=17" title="Jovian Viewer" height="771" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>   
+            
+          <p align="justify">Based on the pairplot above, I can see that length of membership is the most correlated feature with Yearly Amount Spent. To see this correlated data more clearly, I will plot this two column using lmplot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=21" title="Jovian Viewer" height="470" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>  
+            
+           <h2 class="section-heading"><u>Linear Regression Model</u></h2> 
+           
+           <h3 style="margin-top: 20px;">Training and Testing Data</h3> 
+           
+           <p align="justify">In this section, I will split the data into training and testing sets. My target is yearly amount spent column and I will set it to variable y, then I set variable X equal to the numerical features of the customers column. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=24-25" title="Jovian Viewer" height="159" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+           <p align="justify">I will use model_selection.train_test_split from sklearn to split the data into training and testing sets. Then set test_size=0.3 and random_state=101.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=27-28" title="Jovian Viewer" height="159" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+           <h3 style="margin-top: 20px;">Training the Model</h3> 
+            
+           <p align="justify">In this section, I will use LinearRegression module from sklearn, then create an instance called lm and fit the X_train and y_train to lm. After that, we got lm.foef_, later I will interpret this coefficient.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=30" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=32" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=34" title="Jovian Viewer" height="118" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=36" title="Jovian Viewer" height="165" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+           <h3 style="margin-top: 20px;">Predicting Test Data</h3> 
+            
+           <p align="justify">After fitting our model, I will try to predict the yearly amount spent then compare my prediction value to real value using scatter plot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=38" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=40" title="Jovian Viewer" height="365" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <p align="justify">From scatte plot above, I can see that my model is good enough to predict the values because I got almost idenctical data with the real values.</p>
+            
+            <h3 style="margin-top: 20px;">Evaluating the Model</h3>
+            
+            <p align="justify">To evaluate the model, I will calculate the Mean Absolute Error, Mean Squared Error, and the Root Mean Squared Error. The result is good enough because I get the minimum error for this three metric.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=42" title="Jovian Viewer" height="229" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <h3 style="margin-top: 20px;">Residuals</h3>
+            
+            <p align="justify">To make sure everything was okay with the data, I will try to plot a histogram and see if my predictions is normally distributed. </p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=44" title="Jovian Viewer" height="378" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <p align="justify">From the plot above, I got my predictions value is normally distributed. It confirm that my model is good enough to predicts the yearly amount spent. To further analysis, I will try to interpret the coefficient value.</p>
+            
+            <h3 style="margin-top: 20px;">Conclusions</h3>
+            
+            <p align="justify">From the coefficient above, I will create a new dataframe to make it easier to read.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/linear-regression-project-my-answers/v/1&cellId=46" title="Jovian Viewer" height="276" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+            <p align="justify">Interpreting the coefficients:</p>
+            
+            <ul align='justify'>
+                <li>
+                    Holding all other features fixed, a 1 unit increase in <b>Avg. Session Length</b> is associated with an increase of 25.98 total dollars spent.
+                </li>
+                <li>
+                    Holding all other features fixed, a 1 unit increase in <b>Time on App</b> is associated with an increase of 38.59 total dollars spent.
+                </li>
+                <li>
+                    Holding all other features fixed, a 1 unit increase in <b>Time on Website</b> is associated with an increase of 0.19 total dollars spent.
+                </li>
+                <li>
+                    Holding all other features fixed, a 1 unit increase in <b>Length of Membership</b> is associated with an increase of 61.27 total dollars spent.
+                </li>
+            </ul>
+            
+           <p align="justify">From all of our data visualization and our linear regression model, there are two factors to consider:</p>
+            
+            <ul align='justify'>
+                <li>From the jointplot, there are more people using App than Website.
+                </li>
+                <li>From the coefficient, people who using App tend to spent more money than people who using Website.
+                </li>
+            </ul>
+            
+           <p>Consider the two factors above, if the company want to increase their profit <b>significantly</b>, the company can develop app more. But, if the company want to increase the profit <b>gradually</b>, the company can develop the Website to catch up to the performance of the mobile app.</p>
+        
+           <h2 class="section-heading" style="margin-top: 40px;"><u>Additional Resources</u></h2>
+            <ul>
+                <li>
+                    Header Backgrounds by CardMapr at <a href="https://unsplash.com/photos/KEMb3TSbZBc">unsplash.com</a> 
+                </li>
+                <li>
+                    For further explanation regarding python code, please kindly check this <a href="https://github.com/afaf1204/Data-Projects/tree/main/Linear%20Regression%20Project">link</a>.
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/Afdhal_Gani10">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/afdhal-afgani/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/afaf1204">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Afdhal Afgani 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

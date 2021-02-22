@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>911 Calls Capstone Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Afdhal Afgani's Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact_page.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/ambulance.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-14 mx-auto">
+          <div class="post-heading">
+            <h1>911 Calls Capstone Project</h1>
+            <h2 class="subheading">Show step-by-step how to analyze and visualize the dataset to better understand 911 calls and what originates them.</h2>
+            <span class="meta">Posted by
+              <a href="#">Afdhal Afgani</a>
+              on January 31, 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-10 mx-auto">
+          <p align="justify">911 Calls Capstone Project is my own exercise project from Udemy Python for Data Science and Machine Learning Bootcamp by Jose Portilla. In this project, I learned how to analyze and visualize the dataset to better understand 911 calls. In this project, I use Python Anaconda using Jupyter Notebook. For this capstone project we will be analyzing some 911 call data from <a href="https://www.kaggle.com/mchirico/montcoalert">Kaggle</a>. The data contains the following fields:</p>
+            
+            <ul>
+                <li>lat       : String variable, Latitude</li>
+                <li>lng       : String variable, Longitude</li>
+                <li>desc      : String variable, Description of the Emergency Call</li>
+                <li>zip       : String variable, Zipcode</li>
+                <li>title     : String variable, Title</li>
+                <li>timeStamp : String variable, YYYY-MM-DD HH:MM:SS</li>
+                <li>twp       : String variable, Township</li>
+                <li>addr      : String variable, Address</li>
+                <li>e         : String variable, Dummy variable (always 1)</li>
+            </ul>
+          
+          <h2 class="section-heading"><u>Project Intro/Objective</u></h2>
+          
+          <p align="justify">The purpose of this project is show step-by-step how to analyze and visualize the dataset to better understand 911 calls and what originates them.</p>
+            
+          <h2 class="section-heading"><u>Project Library</u></h2>
+            
+          <ul>    
+                <li>Numpy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+          </ul>
+        
+          <h2 class="section-heading"><u>Data and Setup</u></h2>
+            
+          <p align="justify">In this section, I want to show some of the data information, it includes Data Frame Info and Data Frame Head.</p>
+          
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=10" title="Jovian Viewer" height="481" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=12" title="Jovian Viewer" height="537" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+                    
+          <h2 class="section-heading"><u>Data Visualization</u></h2>
+            
+          <p align="justify">In this section, I want to visualize the data needed using seaborn and look for something strange about the data.</p>
+        
+          <h3>Reason Countplot</h3>
+          <p>In this section, I will show you the countplot from the reason of all 911 calls. Before do this, I create a new feature from the title column where I split the reason and the department, where I got EMS, Traffic, and Fire departments.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=22" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=24" title="Jovian Viewer" height="181" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=26" title="Jovian Viewer" height="378" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+          
+          <h3>Day of Week Countplot</h3>
+          <p>In this section, I create a coountplot of the Day of Week column with hue based off of the Reason Column. Because timestamp column datatype is a string, I need to convert this column to datetime object. Then divide it to Hour, Month, and Day of Week. After that, I can plot the Day of Week countplot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=28" title="Jovian Viewer" height="118" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=30" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=32" title="Jovian Viewer" height="128" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=34-35" title="Jovian Viewer" height="142" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=39" title="Jovian Viewer" height="438" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <h3>Month Countplot</h3>
+          <p>In this section, I create a countplot of the Month column with hue based off of the Reason Column.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=41" title="Jovian Viewer" height="438" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+                      
+          <h2 class="section-heading"><u>Exploratory Data Analysis</u></h2>
+            
+          <p align="justify">From month countplot, I can see that the our data has missing value, where there are some missing months. To see this missing data, I can use pandas and then visualize it using simple plot and lmplot (2D scatterplot with an optional overlaid regression line).</p>
+            
+          <h3>Create groupBy Data Using Month Column</h3>
+          <p>In this section, I create groupBy data using month column and then count all the data for aggregation, and then we can see the groupBy data frame using head() of the data frame.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=44" title="Jovian Viewer" height="373" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <h3 >groupBy Data Visualization</h3>
+          <p>Futhermore, I can visualize the data using simple plot and lmplot.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=46" title="Jovian Viewer" height="378" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=48" title="Jovian Viewer" height="470" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p>With simple plot and lmplot, we can see the data from month 9 to 11.</p>
+            
+          <h3>Visualize Available Data</h3>
+            
+          <p>For further understanding, we can visualize the available data. We can visualize the data by date and by departments. First, I have to create a new column called date from the timestamp then I can plot the data by date and by departments.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=50" title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=52" title="Jovian Viewer" height="389" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=54-56" title="Jovian Viewer" height="800" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <h3>HeatMap and ClusterMap Data</h3>
+            
+          <p>To help me read the data, I can use HeatMap and ClusterMap. HeatMap and ClusterMap makes it easy to read some related data where I collect the related data in certain places.</p>
+          
+          <p>Using groupBy I create a new table using <b>day of week</b> and <b>date</b> column and then count all the data.</p>   
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=58" title="Jovian Viewer" height="417" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+                      
+          <p>Then I create HeatMap and ClusterMap using dayHour data frame.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=60" title="Jovian Viewer" height="503" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+                
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=62" title="Jovian Viewer" height="769" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+            
+          <p>Then using groupBy I create a new table using <b>day of week</b> and <b>month</b> column and then count all the data.</p>
+            
+            <div>
+                <iframe src="https://jovian.ai/embed?url=https://jovian.ai/afaf1204/911-calls/v/1&cellId=65-66" title="Jovian Viewer" height="1300" width="100%" style="margin 0 auto; max-width: 800px;" frameborder="0" scrolling="auto"></iframe>
+            </div>
+                      
+         <p>From all of the HeatMaps and ClusterMaps, we can conclude that:</p>
+            
+         <ul>
+            
+            <li>There are <b>high</b> 911 calls between hour <b>8-20</b>.</li>
+            <li>There are <b>low</b> 911 call between hour <b>22-6</b>.</li>
+            <li>Month <b>1, 4, and 7</b> has the <b>most</b> 911 call.</li>
+            <li>Month <b>8 and 12</b> has <b>low</b> 911 call.</li>
+            <li>On <b>saturday month 1</b>, there is the <b>highest</b> 911 call.</li>
+         </ul>
+            
+         <h2 class="section-heading"><u>Additional Resources</u></h2>
+            <ul>
+                <li>
+                    Header Backgrounds by Wallpaper Flare at <a href="https://www.wallpaperflare.com/white-and-red-ambulance-car-on-parking-area-emergency-room-wallpaper-zcamk">wallpaperflare.com</a> 
+                </li>
+                <li>
+                    <a href="https://www.kaggle.com/mchirico/montcoalert">Kaggle Original Challenge Source</a>
+                </li>
+                <li>
+                    For further explanation regarding python code, please kindly check this <a href="https://github.com/afaf1204/Data-Projects/tree/main/911%20Calls">link</a>.
+                </li>
+            </ul>   
+                   
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/Afdhal_Gani10">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/afdhal-afgani/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/afaf1204">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Afdhal Afgani 2021</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
